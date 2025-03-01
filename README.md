@@ -32,16 +32,17 @@ You will also need Python and a shell of some kind (bash/zsh) on Linux or Mac. I
 1. Turn on monitor, put VideoOlympics cartridge in Atari 2600 console, and turn on the Atari console.
     - You should see the Pong game appear on the screen.
 2. Plug NeuroPong controller into the back of one of the Atari controller ports.
-3. Power on the Raspberry Pi, and plug DAVIS346 camera into one of the USB ports on the Raspberry Pi.
-4. Compile the network using `app_compile` from the `embedded_neuromorphic/` repo
+    - *NOTE: you will need to make the NeuroPong cable. An detailed construction diagram can be found in the `/imgs` folder*
+4. Power on the Raspberry Pi, and plug DAVIS346 camera into one of the USB ports on the Raspberry Pi.
+5. Compile the network using `app_compile` from the `embedded_neuromorphic/` repo
     - Ex: `./bin/app_compile -j network_file -o kit-code/pico-pong_observations.c -a kit-code/pico-pong_actions[2,3].c -s`
-5. Flash the three Raspberry Pi Picos on the kit with the appropriate encoder, decoder, and network. 
-6. Power on the Neuromorphic Kit
-7. On the Raspberry Pi, run `scripts/calibration.py` to assist with focusing the lens and cropping the camera's FOV to the screen.
+6. Flash the three Raspberry Pi Picos on the kit with the appropriate encoder, decoder, and network. 
+7. Power on the Neuromorphic Kit
+8. On the Raspberry Pi, run `scripts/calibration.py` to assist with focusing the lens and cropping the camera's FOV to the screen.
     - The output produced by `scripts/calibration.py` is the command that is used to run `scripts/event_server.py`.
         - It figures out what the crop coordinates are and what the downsampling parameters need to be to match whatever the target downsampled resolution is. Target resolution is specified via global variables in the `scripts/calibration.py` program.
-8. Run the command output by `scripts/calibration.py`
+9. Run the command output by `scripts/calibration.py`
     - Ex: `python3 event_server.py --crop ...`
-9. Wait 20-30 seconds for the system to initialize. If it's unreponsive, CTRL-C the event_server process and rerun it.
-10. Begin the Atari game by toggling the ``Game Reset'' switch on the Atari system.
+10. Wait 20-30 seconds for the system to initialize. If it's unreponsive, CTRL-C the event_server process and rerun it.
+11. Begin the Atari game by toggling the ``Game Reset'' switch on the Atari system.
      
