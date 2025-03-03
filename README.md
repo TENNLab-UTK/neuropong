@@ -26,6 +26,24 @@ You will also need Python and a shell of some kind (bash/zsh) on Linux or Mac. I
 
 ## Table of Hardware Materials/Components
 
+|    | Part              | Quantity | Cost |
+|:--:| ----------------: | ------: | ----: |
+|    | PCB Design        |  1   | $4.11 |
+|    | AD5242           |   1   | $4.55 |
+|    | ULN2008    |  1 (unused)   | $3.95 |
+|    | Female pin strips |  2   | $26.00 |
+|    | Raspberry Pi 4    |  1  | $75.00 |
+|    | MicroSD Card    |  1   | $13.50 |
+|    | Breakout Cable    |  1   | $20.00 |
+|**Neuromorphic Starter Kit** |  |     |  |
+|    | PCB Design |  1  | $10.65 |
+|    | Raspberry Pi Pico | 3 | $15.00 |
+|    | Power Supply | 1 | $7.69 |
+| **Total** | | | $180.45 | 
+
+
+* The Atari 2600 console and VideoOlympics cartridge together were ~$20.00.
+* The DAVIS346 camera used for this project was purchased from [Inivation] (https://shop.inivation.com/).
 
 ## Running the System
 
